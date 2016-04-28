@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="SistemaParaRestaurantePU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>br.edu.ifsul.modelo.Bebida</class>
+    <class>br.edu.ifsul.modelo.Bufe</class>
+    <class>br.edu.ifsul.modelo.Comanda</class>
+    <class>br.edu.ifsul.modelo.Fornecedor</class>
+    <class>br.edu.ifsul.modelo.Funcionario</class>
+    <class>br.edu.ifsul.modelo.Gerente</class>
+    <class>br.edu.ifsul.modelo.Nota</class>
+    <class>br.edu.ifsul.modelo.Pessoa</class>
+    <class>br.edu.ifsul.modelo.Prato</class>
+    <class>br.edu.ifsul.modelo.Produto</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/SistemaParaRestaurante"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="postgres"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.connection.autocommit" value="false"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
